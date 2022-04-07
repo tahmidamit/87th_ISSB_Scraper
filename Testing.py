@@ -88,15 +88,15 @@ def issb_scraper():
 
 	if len(last_update) > 0:
 		from twilio.rest import Client
-		account_sid = 'AC9b72bc6a1537099e31db48f8eb286f03' 
-		auth_token = '2a0535ceaf0ff708647fad8f1d57379d' 
+		account_sid = 'SID' 
+		auth_token = 'TOKEN' 
 		client = Client(account_sid, auth_token) 
 	 
 
 		message = client.messages.create(  
 		                              messaging_service_sid='MGa9ce408c8047c9f3f6fccc87d794e2f0', 
 		                              body= f'The website added {len(last_update)} new candidates of them {len(mess)} are from shifted list. {21-x[9]} candidates are still left from your board.',
-		                              to='+8801772488663' 
+		                              to='NUMBER' 
 		                          ) 
 	 
 		#print(message.sid)
